@@ -10,7 +10,7 @@ export default function MainPage() {
 		dispatch(loadcountries());
 	});
 	return (
-		<div>
+		<div className='main'>
 			<NavbarMine />
 			<Countries />
 		</div>

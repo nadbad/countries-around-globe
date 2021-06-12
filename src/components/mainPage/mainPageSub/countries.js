@@ -15,7 +15,7 @@ export default function Countries() {
 						name={country.name}
 						population={country.population}
 						region={country.region}
-						image={country.image}
+						image={country.flag}
 					/>
 				);
 			})}

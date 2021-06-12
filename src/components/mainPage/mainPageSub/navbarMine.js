@@ -3,7 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 export default function NavbarMine() {
 	return (
-		<Navbar bg='dark' variant='dark'>
+		<Navbar bg='light' variant='light'>
 			<Navbar.Brand href='#home'>Countries Globally</Navbar.Brand>
 			<Navbar.Toggle />
 			<Navbar.Collapse className='justify-content-end'>
