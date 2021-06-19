@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import moment from 'moment';
 import { apiCallBegan } from './api';
-import Api from '../apis.json';
 
 const slice = createSlice({
 	name: 'countries',
@@ -33,7 +32,7 @@ const {
 export default slice.reducer;
 
 // Action Creators
-const url = Api.Countries;
+const url = process.env.REACT_APP_COUNTRIES_API;
 
 export const loadcountries = () => (dispatch, getState) => {
 	const { lastFetch } = getState().entities.countries;

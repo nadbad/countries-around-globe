@@ -1,18 +1,31 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
-export default function Country(country) {
+function Country(country) {
 	return (
-		<div className='country'>
-			<div className='content'>
-				<div>
-					<img src={country.image} alt='' />
-				</div>
-				<div className='country-info'>
-					<h3>{country.name}</h3>
-					<p>Population: {country.population}</p>
-					<p>Region: {country.region}</p>
-				</div>
-			</div>
-		</div>
+		<Link to={`/country/${country.name}`}>
+			<Card className='country'>
+				<Card.Img
+					variant='top'
+					src={country.image}
+					alt={`flag for ${country.name}`}
+					className='country-image'
+				/>
+				<Card.Body>
+					<Card.Title>{country.name}</Card.Title>
+					<Card.Text>
+						<span>Population:</span>{' '}
+						{country.population.toLocaleString()}
+						<br></br>
+						<span>Region:</span> {country.region}
+						<br></br>
+						<span>Capital:</span> {country.capital}
+					</Card.Text>
+				</Card.Body>
+			</Card>
+		</Link>
 	);
 }
+
+export default Country;
