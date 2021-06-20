@@ -69,7 +69,7 @@ html {
 .countries {
   width: 80%;
   margin-top: 45px;
-  min-height: 727px;
+  min-height: 713px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,7 +331,7 @@ html {
     margin-bottom: 30px;
   }
   .filter-content #region-filter {
-    padding: 10px 40px 10px 25px;
+    padding: 10px 0px 10px 25px;
   }
 }
 /*# sourceMappingURL=sass.css.map */
