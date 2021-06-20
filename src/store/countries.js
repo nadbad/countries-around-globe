@@ -32,7 +32,7 @@ const {
 export default slice.reducer;
 
 // Action Creators
-const url = process.env.REACT_APP_COUNTRIES_API;
+const url = 'https://restcountries.eu/rest/v2';
 
 export const loadcountries = () => (dispatch, getState) => {
 	const { lastFetch } = getState().entities.countries;
