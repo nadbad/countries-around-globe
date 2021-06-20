@@ -228,7 +228,7 @@ html {
 }
 
 .filter-content #region-filter {
-  padding: 15px 40px 15px 25px;
+  padding: 15px 0px 15px 25px;
   -webkit-box-shadow: var(--boxShadow-btn);
           box-shadow: var(--boxShadow-btn);
   border: none;
