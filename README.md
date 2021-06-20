@@ -2,15 +2,24 @@
 
 Responsive web app that displays all the countries around the world with some relevant and related information to them. 
 
-Technologies used: 
-React.js 
-Redux.js
-Scss
-Bootstrap
-REST COUNTRIES API (https://restcountries.eu/)
+# Technologies used
+
+-React.js 
+
+-Redux.js
+
+-Scss
+
+-Bootstrap
+
+-REST COUNTRIES API (https://restcountries.eu/)
 
 Live Demo: https://aroundtheglobe.netlify.app/
 
+# Preview
+![Screenshot 2021-06-20 083631](https://user-images.githubusercontent.com/67517413/122665976-ec0f4000-d1aa-11eb-9eea-af71de7632b2.png)
+
+![Screenshot 2021-06-20 083613](https://user-images.githubusercontent.com/67517413/122665986-f8939880-d1aa-11eb-87cf-dfec141f075a.png)
 
 
 # Getting Started with Create React App
