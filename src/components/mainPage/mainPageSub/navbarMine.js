@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 
 export default function NavbarMine() {
+	const [mode, setMode] = useState('Light Mode');
+
+	const darkMode = () => {
+		const body = document.getElementById('root');
+		if (body.className === '') {
+			setMode('Dark Mode');
+			body.className = 'dark';
+		} else if (body.className === 'dark') {
+			setMode('Light Mode');
+			body.className = '';
+		}
+	};
 	return (
 		<Navbar className='navbar'>
 			<Navbar.Brand href='/' className='navbar-brand'>
@@ -11,7 +23,9 @@ export default function NavbarMine() {
 			</Navbar.Brand>
 			<Navbar.Toggle />
 			<Navbar.Collapse className='justify-content-end'>
-				<Navbar.Text className='navbar-mode'>Mode</Navbar.Text>
+				<Navbar.Text className='navbar-mode' onClick={darkMode}>
+					{mode}
+				</Navbar.Text>
 			</Navbar.Collapse>
 		</Navbar>
 	);

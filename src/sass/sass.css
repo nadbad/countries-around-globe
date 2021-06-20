@@ -1,3 +1,23 @@
+:root {
+  --color-page-background: #fafafa;
+  --color-card-background: white;
+  --color-nav-background: white;
+  --color-text: black;
+  --boxShadow-nav: 0 0 10px rgba(0, 0, 0, 0.2);
+  --boxShadow-card: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  --boxShadow-btn: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dark {
+  --color-page-background: #202c37;
+  --color-card-background: #2b3945;
+  --color-nav-background: #2b3945;
+  --color-text: white;
+  --boxShadow-nav: ;
+  --boxShadow-card: ;
+  --boxShadow-btn: ;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,22 +30,23 @@ html {
 }
 
 .mainPage {
-  background-color: #fafafa;
+  background-color: var(--color-page-background);
 }
 
 .navbar {
-  background-color: white !important;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-nav-background) !important;
+  -webkit-box-shadow: var(--boxShadow-nav);
+          box-shadow: var(--boxShadow-nav);
   height: 10vh;
 }
 
 .navbar-brand {
   margin-left: 75px;
+  color: var(--color-text) !important;
 }
 
 .navbar-brand-text {
-  color: black !important;
+  color: var(--color-text) !important;
   font-size: 28px;
   font-weight: 700;
 }
@@ -33,7 +54,7 @@ html {
 .navbar-mode {
   cursor: pointer;
   margin-right: 75px;
-  color: black !important;
+  color: var(--color-text) !important;
 }
 
 .main {
@@ -70,14 +91,14 @@ html {
   width: 280px;
   margin: 45px 15px;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: var(--boxShadow-card);
+          box-shadow: var(--boxShadow-card);
   -webkit-transition: -webkit-transform ease-out 250ms;
   transition: -webkit-transform ease-out 250ms;
   transition: transform ease-out 250ms;
   transition: transform ease-out 250ms, -webkit-transform ease-out 250ms;
   text-decoration: none;
-  color: black;
+  color: var(--color-text);
 }
 
 .country span {
@@ -87,13 +108,14 @@ html {
 
 .country.card {
   border-radius: 8px 8px;
+  background-color: var(--color-card-background);
 }
 
 .country:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   text-decoration: none;
-  color: black;
+  color: var(--color-text);
 }
 
 .country-image {
@@ -107,7 +129,7 @@ html {
 .country-details {
   height: 90vh;
   width: 100%;
-  background-color: #fafafa;
+  background-color: var(--color-page-background);
 }
 
 .country-details-country {
@@ -118,12 +140,12 @@ html {
 
 .country-details-country .button-back.btn.btn-primary {
   width: 135px;
-  background-color: white;
-  color: black;
+  background-color: var(--color-card-background);
+  color: var(--color-text);
   border: none;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 2px 6px rgba(124, 90, 90, 0.2);
-          box-shadow: 0px 2px 6px rgba(124, 90, 90, 0.2);
+  -webkit-box-shadow: var(--boxShadow-btn);
+          box-shadow: var(--boxShadow-btn);
   -webkit-transition: background-color ease-out 300ms;
   transition: background-color ease-out 300ms;
   margin-bottom: 60px;
@@ -142,6 +164,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   max-width: 1200px;
+  color: var(--color-text);
 }
 
 .country-details-country .content-country-image {
@@ -192,27 +215,34 @@ html {
 
 .filter-content-search.form-control {
   width: 200px;
-  background-color: white;
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-card-background);
+  -webkit-box-shadow: var(--boxShadow-btn);
+          box-shadow: var(--boxShadow-btn);
   border-radius: 10px;
   border: none;
 }
 
+.filter-content-search.form-control:focus {
+  background-color: var(--color-card-background);
+  color: var(--color-text);
+}
+
 .filter-content #region-filter {
   padding: 15px 40px 15px 25px;
-  -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: var(--boxShadow-btn);
+          box-shadow: var(--boxShadow-btn);
   border: none;
   border-radius: 8px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   width: 100%;
+  color: var(--color-text);
+  background-color: var(--color-card-background);
 }
 
-.filter-content #region-filter a {
-  color: black;
+.filter-content #region-filter:focus {
+  border: none;
 }
 
 .border-container {
@@ -249,18 +279,59 @@ html {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background-color: white;
-  color: black;
+  background-color: var(--color-card-background);
+  color: var(--color-text);
   border: none;
   border-radius: 5px;
   margin: 0px 16px 16px 0px;
-  -webkit-box-shadow: 0px 2px 6px rgba(124, 90, 90, 0.2);
-          box-shadow: 0px 2px 6px rgba(124, 90, 90, 0.2);
+  -webkit-box-shadow: var(--boxShadow-btn);
+          box-shadow: var(--boxShadow-btn);
   -webkit-transition: background-color ease-out 300ms;
   transition: background-color ease-out 300ms;
 }
 
 .border-container .border-countries-button-container .border-countries-buttons:hover {
   background-color: #8e44ad;
+}
+
+@media only screen and (max-width: 1366px) {
+  .country-details {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .country-details-country .content {
+    display: block;
+  }
+  .country-details-country .content .country-container {
+    margin-top: 15px;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .country-details-country {
+    width: 90%;
+  }
+  .navbar-brand {
+    margin-left: 15px;
+  }
+  .navbar-brand-text {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .navbar-mode {
+    margin-right: 15px;
+  }
+  .filter-content {
+    display: block;
+  }
+  .filter-content-search.form-control {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .filter-content #region-filter {
+    padding: 10px 40px 10px 25px;
+  }
 }
 /*# sourceMappingURL=sass.css.map */

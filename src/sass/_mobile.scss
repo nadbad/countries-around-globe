@@ -1,0 +1,52 @@
+@media only screen and (max-width: 1366px) {
+	.country-details {
+		height: fit-content;
+	}
+
+	.country-details-country .content {
+		display: block;
+
+		& .country-container {
+			margin-top: 15px;
+			margin-left: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.country-details {
+		&-country {
+			width: 90%;
+		}
+	}
+
+	.navbar {
+		&-brand {
+			margin-left: 15px;
+
+			&-text {
+				font-size: 20px;
+				font-weight: 700;
+			}
+		}
+
+		&-mode {
+			margin-right: 15px;
+		}
+	}
+
+	.filter {
+		&-content {
+			display: block;
+
+			&-search.form-control {
+				width: 100%;
+				margin-bottom: 30px;
+			}
+
+			& #region-filter {
+				padding: 10px 40px 10px 25px;
+			}
+		}
+	}
+}

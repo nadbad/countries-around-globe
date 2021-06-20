@@ -10,6 +10,7 @@ function BorderCountries({ borders }) {
 			<div style={{ display: 'block', width: '200px' }}>
 				<h3 className='border-countries-title'>Border Countries: </h3>
 			</div>
+
 			<div className='border-countries-button-container'>
 				{borders
 					.filter((country, index) => {
@@ -37,9 +38,7 @@ export default function CountryDetailsSub() {
 			<div>
 				<Button
 					className='button-back'
-					onClick={() => {
-						window.history.back();
-					}}>
+					onClick={() => window.history.back()}>
 					Back
 				</Button>
 			</div>
