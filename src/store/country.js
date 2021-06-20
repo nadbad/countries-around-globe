@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { apiCallBegan } from './api';
-import { root } from '../../api.json';
+import { root } from '../api.json';
 
 const slice = createSlice({
 	name: 'country',
