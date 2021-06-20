@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { apiCallBegan } from './api';
+import { root } from '../../api.json';
 
 const slice = createSlice({
 	name: 'country',
@@ -28,7 +29,7 @@ const { countryReceived, countryRequested, countryRequestFailed } =
 export default slice.reducer;
 
 // Action Creators
-const url = process.env.REACT_APP_COUNTRIES_API;
+const url = root;
 
 export const loadcountry = country => dispatch => {
 	dispatch(
