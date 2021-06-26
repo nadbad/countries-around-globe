@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
+import LazyLoad from 'react-lazyload';
 import { useSelector } from 'react-redux';
 import { COUNTRYCODES } from '../../../countryCodes';
 import { Link } from 'react-router-dom';
@@ -45,11 +46,13 @@ export default function CountryDetailsSub() {
 
 			{country && country.length ? (
 				<div className='content'>
-					<img
-						src={country[0].flag}
-						alt={`flag for ${country[0].name}`}
-						className='content-country-image'
-					/>
+					<LazyLoad height={160} offset={100} once>
+						<img
+							src={country[0].flag}
+							alt={`flag for ${country[0].name}`}
+							className='content-country-image'
+						/>
+					</LazyLoad>
 
 					<div className='country-container'>
 						<h3 className='country-container-information-title'>
