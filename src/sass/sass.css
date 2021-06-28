@@ -323,6 +323,9 @@ html {
   .navbar-mode {
     margin-right: 15px;
   }
+  .filter {
+    width: 100%;
+  }
   .filter-content {
     display: block;
   }
