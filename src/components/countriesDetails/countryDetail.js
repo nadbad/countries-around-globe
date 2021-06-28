@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
-import NavbarMine from './navbarMine';
+import Navbar from '../navbar/navbar';
 import CountryDetailsSub from './countryDetailsSub';
-import { loadcountry } from '../../../store/country';
+import { loadcountry } from '../../store/country';
 
 export default function CountryDetail() {
 	const dispatch = useDispatch();
@@ -12,7 +12,7 @@ export default function CountryDetail() {
 	}, [dispatch]);
 	return (
 		<div>
-			<NavbarMine />
+			<Navbar />
 			<div className='country-details'>
 				<CountryDetailsSub />
 			</div>

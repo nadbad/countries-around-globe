@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 
-export default function NavbarMine() {
+export default function NavBar() {
 	const [mode, setMode] = useState('Light Mode');
 
 	const darkMode = () => {

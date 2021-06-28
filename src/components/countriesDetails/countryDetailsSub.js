@@ -2,7 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import LazyLoad from 'react-lazyload';
 import { useSelector } from 'react-redux';
-import { COUNTRYCODES } from '../../../countryCodes';
+import { COUNTRYCODES } from '../../countryCodes';
 import { Link } from 'react-router-dom';
 
 function BorderCountries({ borders }) {
