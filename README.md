@@ -12,7 +12,7 @@ Responsive web app that displays all the countries around the world with some re
 
 -Bootstrap
 
--REST COUNTRIES API (https://restcountries.eu/)
+-REST COUNTRIES API (https://restcountries.com/)
 
 Live Demo: https://aroundtheglobe.netlify.app/
 
